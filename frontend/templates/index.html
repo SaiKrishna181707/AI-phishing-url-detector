@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Powered Phishing & Scam URL Detection System</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hero">
+        <p class="eyebrow">Portfolio-ready cybersecurity ML demo</p>
+        <h1>AI-Powered Phishing &amp; Scam URL Detection System</h1>
+        <p class="subtitle">
+          Enter a suspicious link to receive a Safe/Scam prediction, confidence score, and a feature-based explanation.
+        </p>
+
+        <form id="predict-form" class="predict-form">
+          <div class="input-group">
+            <input id="url-input" type="text" placeholder="https://example.com/login" autocomplete="off" />
+            <button type="submit">Analyze URL</button>
+          </div>
+          <div class="sample-actions">
+            <button type="button" class="sample-button" data-url="https://www.google.com">Try Safe Sample</button>
+            <button type="button" class="sample-button danger" data-url="secure-login-paypa1.com/verify">Try Scam Sample</button>
+          </div>
+          <p class="helper">Examples: <code>https://www.google.com</code> · <code>secure-login-paypa1.com/verify</code></p>
+        </form>
+      </section>
+
+      <section id="result-card" class="result-card hidden" aria-live="polite">
+        <div class="result-top">
+          <div>
+            <span class="muted">Prediction</span>
+            <h2 id="prediction-label">Awaiting analysis</h2>
+          </div>
+          <span id="probability-pill" class="pill neutral">0% confidence</span>
+        </div>
+        <p id="explanation-text" class="explanation"></p>
+        <div class="meta-grid">
+          <div class="meta-card">
+            <span class="muted">Blacklist match</span>
+            <strong id="blacklist-value">No</strong>
+          </div>
+          <div class="meta-card">
+            <span class="muted">Primary reasons</span>
+            <ul id="reasons-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="error-card" class="error-card hidden"></section>
+    </main>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

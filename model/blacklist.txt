@@ -1,0 +1,5 @@
+# Known malicious or demo-blacklisted domains
+paypa1-security-check.com
+verify-account-wallet.net
+secure-update-banking-alert.com
+bit-ly-login-check.com
